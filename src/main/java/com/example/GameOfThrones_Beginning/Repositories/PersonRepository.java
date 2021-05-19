@@ -1,0 +1,15 @@
+package com.example.GameOfThrones_Beginning.Repositories;
+
+import com.example.GameOfThrones_Beginning.model.Person;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+
+
+@Repository
+public interface PersonRepository extends CrudRepository<Person, Integer> {
+}
+
+
+
+

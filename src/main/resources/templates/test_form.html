@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form id="form298728049" name='form298728049' role="form" th:action="@{/person_res/10}" method='POST' data-formactiontype="0" data-inputbox=".t-input-group" data-success-url="@{/person_res}" class="t-form js-form-proccess t-form_inputs-total_2 " data-success-callback="t678_onSuccess" >
+    <!-- NO ONE SERVICES CONNECTED -->
+    <div class="js-successbox t-form__successbox t-text t-text_md" style="display:none;"></div>
+    <div class="t-form__inputsbox">
+        <div class="t-input-group t-input-group_nm" data-input-lid="1494858943227">
+            <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1494858943227" style="">ВАШЕ ИМЯ</div>
+            <div class="t-input-block">
+                <input type="text" autocomplete="name" name="Name" class="t-input js-tilda-rule " value="" placeholder="ХОДОР" data-tilda-req="1" data-tilda-rule="name" style="color:#000000; border:1px solid #000000; ">
+                <div class="t-input-error"></div>
+            </div>
+        </div>
+        <th:block th:each="question:${questions}">
+            <div class="t-input-group t-input-group_rd" data-input-lid="1617264672991">
+
+                <div th:text="${question.getText()}" class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__161726467299" style="">ВОПРОС 1</div>
+                <div class="t-input-block">
+                    <div class="t-radio__wrapper">
+                        <label class="t-radio__control t-text t-text_xs" style="" >
+                            <input type="radio" th:name="${question.getQuestion_id()}" value="0"  class="t-radio js-tilda-rule" data-tilda-req="1">
+                            <div class="t-radio__indicator" ></div>
+                            [(${question.getV1()})]
+                        </label>
+                        <label class="t-radio__control t-text t-text_xs" style="" >
+                            <input type="radio" th:name="${question.getQuestion_id()}" value="1" class="t-radio js-tilda-rule" data-tilda-req="1">
+                            <div class="t-radio__indicator" ></div>
+                            [(${question.getV2()})]
+                        </label>
+                    </div>
+
+                    <div class="t-input-error"></div>
+                </div>
+
+            </div></th:block>
+
+</body>
+</html>
