@@ -1,4 +1,6 @@
 package com.example.GameOfThrones_Beginning;
+import org.apache.commons.logging.Log;
+
 import static java.lang.Math.*;
 
 public class TestResolver {

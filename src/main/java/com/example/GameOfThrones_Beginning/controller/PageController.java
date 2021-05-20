@@ -9,6 +9,8 @@ import org.springframework.data.relational.core.sql.In;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import com.example.GameOfThrones_Beginning.TestResolver.*;
+import com.google.gson.*;
+
 
 import java.util.List;
 import java.util.Map;
@@ -38,7 +40,7 @@ public class PageController {
     }
 
 //person test
-    @RequestMapping(value = "/test_person",method = {RequestMethod.GET,RequestMethod.POST})
+    @RequestMapping(value = "/test_person",method = {RequestMethod.GET})
     public ModelAndView test_person(Map<String,Object> model){
         var questions = questionRepository.findAll();
         model.put("questions", questions);
@@ -60,18 +62,15 @@ public class PageController {
         return new ModelAndView("person_res",model);
     }
 
-    @RequestMapping(value="/person_res",method={RequestMethod.GET,RequestMethod.POST})
-    public ModelAndView person_res(@RequestParam("1") String q1,@RequestParam("2") String q2,
-                                   @RequestParam("3") String q3, @RequestParam("4") String q4, @RequestParam("name") String name,
+    @RequestMapping(value="/test_person",method={RequestMethod.POST})
+    public ModelAndView person_res(@RequestParam(value = "q1") String data,
                                    Map<String,Object> model){
 
-        model.put("q1", q1);
-        model.put("q2", q2);
-        model.put("q3", q3);
-        model.put("q4", q4);
+//        var testData = new Gson().fromJson(data, JsonObject.class);
         int id = TestResolver.GetID(0,0,0,0);
         Optional<Person> person = personRepository.findById(id);
+        model.put("data",data);
         model.put("person", person);
-        return new ModelAndView("person_res",model);
+        return new ModelAndView("redirect:/person_res/" + String.valueOf(id), model);
     }
 }

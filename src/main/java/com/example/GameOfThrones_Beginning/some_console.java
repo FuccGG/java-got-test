@@ -1,29 +1,27 @@
-//package com.example.GameOfThrones_Beginning;
-//
-//import com.example.GameOfThrones_Beginning.Repositories.QuestionRepository;
-//import com.example.GameOfThrones_Beginning.model.Question;
+package com.example.GameOfThrones_Beginning;
+
+import com.example.GameOfThrones_Beginning.Repositories.QuestionRepository;
+import com.example.GameOfThrones_Beginning.controller.GetJsonapi;
+import com.example.GameOfThrones_Beginning.model.Question;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+//import com.google.gson.JsonParser;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.boot.SpringApplication;
 //
+//import java.io.InputStream;
+//import java.io.InputStreamReader;
+//import java.net.URL;
+//import java.net.URLConnection;
+//
 //public class some_console {
-//    @Autowired
-//    private static QuestionRepository questionRepository;
-//    
-//       public static void main(String[] args) {
-//        var stuff = questionRepository.findAll();
-//           for (Question question:stuff
-//                ) {
-//               System.out.println(question.getText());
 //
-//           }
-//
-//        public static int GetID(int firstAnswer, int secondAnswer, int thirdAnswer, int fourthAnswer)
-//        {
-//            int differenceWithID = 1;
-//            int result = (int) (firstAnswer*pow(2,3)+secondAnswer*pow(2,2)+thirdAnswer*pow(2,1)+fourthAnswer*pow(2,0));//
-//             return result + differenceWithID;
-//        }
+//    public String stuff(){
+//        GetJsonapi data = new GetJsonapi;
+//        System.out.println(data.ResultOfCharacters("10"));
+//        return "Sucker";
 //    }
+//
 //}
 /*
 */
