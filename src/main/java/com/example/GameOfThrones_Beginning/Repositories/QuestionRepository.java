@@ -10,7 +10,7 @@ import java.util.List;
 
 
 @Repository
-public interface QuestionRepository extends CrudRepository<Question, String>{
+public interface QuestionRepository extends CrudRepository<Question, Integer>{
 }
 
 

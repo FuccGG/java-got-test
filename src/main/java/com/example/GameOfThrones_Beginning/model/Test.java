@@ -32,18 +32,46 @@ public class Test {
         this.description = description;
     }
 
-    public List<Question> getQuestions() {
-        return questions;
+    private int Q1_id;
+
+    private int Q2_id;
+
+    private int Q3_id;
+
+    private int Q4_id;
+
+    public int getQ1_id() {
+        return Q1_id;
     }
 
-    public void setQuestions(List<Question> questions) {
-        this.questions = questions;
+    public void setQ1_id(int q1_id) {
+        Q1_id = q1_id;
     }
 
-    @OneToMany(mappedBy="question_id")
-    private List<Question> questions;
+    public int getQ2_id() {
+        return Q2_id;
+    }
+
+    public void setQ2_id(int q2_id) {
+        Q2_id = q2_id;
+    }
+
+    public int getQ3_id() {
+        return Q3_id;
+    }
+
+    public void setQ3_id(int q3_id) {
+        Q3_id = q3_id;
+    }
+
+    public int getQ4_id() {
+        return Q4_id;
+    }
+
+    public void setQ4_id(int q4_id) {
+        Q4_id = q4_id;
+    }
 
     public Test(){};
-
 }
 

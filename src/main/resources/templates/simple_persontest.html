@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Введите Ваше имя</title>
+</head>
+<body>
+<h1>[(${testName})]</h1>
+<form action="#" th:action="@{/test_person}" th:object="${testForm}" method="post">
+
+    1.[(${Q1.getText()})]
+    <p>
+
+        <input type="radio" checked="checked" th:field="*{q1}" th:value="0" />[(${Q1.getV1()})]
+        <br>
+        <input type="radio" th:field="*{q1}" th:value="1"/>[(${Q1.getV2()})]
+    </p>
+    2.[(${Q2.getText()})]
+    <p>
+        <input type="radio" th:field="*{q2}" th:value="0" th:checked="checked"/>[(${Q2.getV1()})]
+        <br>
+        <input type="radio" th:field="*{q2}" th:value="1"/>[(${Q2.getV2()})]</p>
+    3.[(${Q3.getText()})]
+    <p>
+        <input type="radio" th:field="*{q3}" th:value="0" checked="checked"/>[(${Q3.getV1()})]
+        <br>
+        <input type="radio" th:field="*{q3}" th:value="1"/>[(${Q3.getV2()})]</p>
+    4.[(${Q4.getText()})]
+    <p>
+        <input type="radio" th:field="*{q4}" th:value="0" checked="checked"/>[(${Q4.getV1()})]
+        <br>
+        <input type="radio" th:field="*{q4}" th:value="1"/> [(${Q4.getV2()})]</p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
