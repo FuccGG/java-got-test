@@ -2,7 +2,7 @@
 <html  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Введите Ваше имя</title>
+    <title>Тест 1</title>
 </head>
 <body>
 <h1>[(${testName})]</h1>
@@ -11,26 +11,32 @@
     1.[(${Q1.getText()})]
     <p>
 
-        <input type="radio" checked="checked" th:field="*{q1}" th:value="0" />[(${Q1.getV1()})]
+        <input type="radio" id="checked-1" checked="checked" th:field="*{q1}" th:value="1" />[(${Q1.getV1()})]
         <br>
-        <input type="radio" th:field="*{q1}" th:value="1"/>[(${Q1.getV2()})]
+        <input type="radio" th:field="*{q1}" th:value="0"/>[(${Q1.getV2()})]
     </p>
     2.[(${Q2.getText()})]
     <p>
-        <input type="radio" th:field="*{q2}" th:value="0" th:checked="checked"/>[(${Q2.getV1()})]
+        <input type="radio"  id="checked-2" th:field="*{q2}" th:value="1" th:checked="checked"/>[(${Q2.getV1()})]
         <br>
-        <input type="radio" th:field="*{q2}" th:value="1"/>[(${Q2.getV2()})]</p>
+        <input type="radio" th:field="*{q2}" th:value="0"/>[(${Q2.getV2()})]</p>
     3.[(${Q3.getText()})]
     <p>
-        <input type="radio" th:field="*{q3}" th:value="0" checked="checked"/>[(${Q3.getV1()})]
+        <input type="radio"  id="checked-3" th:field="*{q3}" th:value="0" checked="checked"/>[(${Q3.getV1()})]
         <br>
         <input type="radio" th:field="*{q3}" th:value="1"/>[(${Q3.getV2()})]</p>
     4.[(${Q4.getText()})]
     <p>
-        <input type="radio" th:field="*{q4}" th:value="0" checked="checked"/>[(${Q4.getV1()})]
+        <input type="radio"  id="checked-4" th:field="*{q4}" th:value="0" checked="checked"/>[(${Q4.getV1()})]
         <br>
         <input type="radio" th:field="*{q4}" th:value="1"/> [(${Q4.getV2()})]</p>
     <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
 </form>
+<script>
+document.getElementById("checked-1").setAttribute("checked","checked")
+document.getElementById("checked-2").setAttribute("checked","checked")
+document.getElementById("checked-3").setAttribute("checked","checked")
+document.getElementById("checked-4").setAttribute("checked","checked")
+</script>
 </body>
 </html>

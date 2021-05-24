@@ -42,9 +42,9 @@
                         <div class="t001 t-align_center">
                            <div class="t001__wrapper" data-hook-content="covercontent">
                               <div class="t001__title t-title t-title_xl" style="" field="title">ПоЗДРАВЛЯЕМ</div>
-                              <th:block th:each="per:${person}">
-                              <div class="t001__descr t-descr t-descr_xl t001__descr_center" style="" field="descr">ТЫ - [(${per.getPerson_info()})]<br />ТЕКСТ<br />ТЕКСТ<br />ТЕКС</div>
-                              </th:block>>
+
+                              <div class="t001__descr t-descr t-descr_xl t001__descr_center" style="" field="descr">ТЫ - [(${person.getPerson_info()})]<br />РОДИЛСЯ: [(${characterApi.getBorn()})]<br />ПОГИБ: [(${characterApi.getDied()})]<br />ПРОИСХОЖДЕНИЕ(КУЛЬТУРА): [(${characterApi.getCulture()})]</div>
+
                               <span class="space"></span>
                            </div>
                         </div>
